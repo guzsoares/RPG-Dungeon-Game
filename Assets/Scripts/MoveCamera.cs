@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveCamera : MonoBehaviour
 {
     public Transform lookAt;
-    public float boundX = 0.15f;
+    public float boundX = 0.40f;
     public float boundY = 0.05f;
 
     private void LateUpdate(){
