@@ -1405,7 +1405,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1426,7 +1426,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1447,7 +1447,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1455,6 +1455,174 @@ TextureImporter:
       bones: []
       spriteID: 31d21099a1e2f674b8374ac64e298043
       internalID: 1952682366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_LongSword
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 225
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5b5dfc6e1cc1040ad8432936cf6485
+      internalID: 1285965947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_Wooden
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 225
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4fd756f5070824f95213b2441f0b0f
+      internalID: 1568572345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_Rusty
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 225
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f036db53e691244bf983263d891b8a
+      internalID: 1283614594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_Stone
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 225
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00936182fc7e3e340a20693c43eef977
+      internalID: 472215539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_Silver
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 225
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddf97065bdd25442b61ab4858c569e4
+      internalID: -1983690204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_Katana
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 225
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d045f15a02b0e41b1eb6d04864276b
+      internalID: -1820488549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_Hero
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 193
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b1de48d9f5d1748bc7cfa33d01675a
+      internalID: -791469987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc_small
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388192b99b1e01e4e87e7cf755bd0a3f
+      internalID: 1621647805
       vertices: []
       indices: 
       edges: []
@@ -1475,9 +1643,11 @@ TextureImporter:
       column_wall_top: 258236114
       lit_torch_3: -1978608001
       brick_floor_top_3: 544118897
+      sword_Stone: 472215539
       wall_0: 1428973936
       silver_chest_void: -2027827893
       corrupted_floor: 1242649708
+      sword_Hero: -791469987
       column_wall_mid: 1455716397
       wall_top: 1607404289
       brick_floor_bottom_3: 1322771546
@@ -1490,6 +1660,7 @@ TextureImporter:
       lit_torch_2: -1755926202
       skull: -1444794080
       stairs_top: 1847371328
+      sword_Silver: -1983690204
       brick_floor_bottom_1: 1325614371
       brick_floor_top_1: -408839611
       brick_floor_mid_2: 1920630306
@@ -1497,6 +1668,7 @@ TextureImporter:
       column_wall_bottom: 462753476
       floor_wall_2: -1033187219
       single_crate_bottom: -812647306
+      sword_Rusty: 1283614594
       stairs_top_1: -381700205
       lit_torch_8: -640824971
       single_crate_top: -372084558
@@ -1505,11 +1677,11 @@ TextureImporter:
       stacked_crate_top: -816660927
       wall_musgo: -122718198
       brick_floor_top_2: 1097695230
-      stairs_bottom_1: -1007630244
+      lit_torch_4: 720551073
       brick_floor_mid_3: 969807362
       floor_0: 465813779
       player_1: -848194941
-      lit_torch_4: 720551073
+      stairs_bottom_1: -1007630244
       corrupted_floor_bottom_1: 1818913836
       stairs_bottom: -1827572439
       column_top: 1568514862
@@ -1518,6 +1690,8 @@ TextureImporter:
       wall_top_2: -835934655
       silver_chest_gold: -1879866345
       floor_musgo: 1411831452
+      sword_Katana: -1820488549
+      orc_small: 1621647805
       wall_bottom_1: -563271216
       lit_torch_1: 695839975
       wall_top_1: 1896590376
@@ -1528,12 +1702,14 @@ TextureImporter:
       wall_hole: 1793409749
       heal_bottom: 1673695964
       corrupted_floo: 1767923548
+      sword_Wooden: 1568572345
       brick_floor_mid: -197010279
       lit_torch_5: -361961242
       brick_floor_bottom_2: 226333789
       wall_drainer: 2028436478
       npc_0: 783485760
       column_bottom: 1162569427
+      sword_LongSword: 1285965947
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
