@@ -124,7 +124,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,7 +145,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,7 +166,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,6 +174,174 @@ TextureImporter:
       bones: []
       spriteID: 58e81e30941ec884aadec9b805db89cc
       internalID: 1219187082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_portal_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 131
+        width: 39
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5575798, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7441a3cfb2a906c4696c1f9bc228af28
+      internalID: 812952194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_portal_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 132
+        width: 39
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47754395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540b35e2fd5f08e47839e93872eaca4c
+      internalID: 974645866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_portal_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 131
+        width: 39
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4850293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee2c44123213f84e9afe8a211454be8
+      internalID: 1048506226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_portal_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 130
+        width: 39
+        height: 50
+      alignment: 9
+      pivot: {x: 0.47121018, y: 0.50748533}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ed73ddac24c754bb0fb6e97aa23253
+      internalID: -987112512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_portal_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 130
+        width: 39
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52245605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50db2db65e821046898cac8a797ff94
+      internalID: -1418159138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_portal_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 132
+        width: 39
+        height: 50
+      alignment: 9
+      pivot: {x: 0.54798305, y: 0.4700586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495350c99f899ec46ad7f4be3f354c09
+      internalID: -791898880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_portal_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 130
+        width: 39
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50748533}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42da320441f3f0d4aa72cbb43ae2c238
+      internalID: 1723354561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_portal_7
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 132
+        width: 39
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47754395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d4a9034d0943444a77159d334707aa
+      internalID: -1032175925
       vertices: []
       indices: 
       edges: []
@@ -189,9 +357,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      green_portal_3: -987112512
+      green_portal_5: -791898880
+      green_portal_0: 812952194
+      green_portal_1: 974645866
+      green_portal_6: 1723354561
       portal_top: 968478625
       portal_mid: -1513103118
+      green_portal_4: -1418159138
+      green_portal_2: 1048506226
       portal_bottom: 1219187082
+      green_portal_7: -1032175925
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
