@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     //References
     public Player player;
     public FloatingTextManager floatingTxtManager;
+    public Weapon weapon;
     //Logic
     public int gold;
     public int xp;
@@ -35,13 +36,30 @@ public class GameManager : MonoBehaviour
         floatingTxtManager.Show(msg,fontSize,color,position,motion,duration);
     }
 
+    public bool TryUpgradeWeapon ()
+    {
+        // is the weapon max level
+        if (weaponPrices.Count <= weapon.weaponLevel)
+        {
+            return false;
+        }
+        if (gold >= weaponPrices[weapon.weaponLevel])
+        {
+            gold -= weaponPrices[weapon.weaponLevel];
+            weapon.UpgradeWeapon();
+            return true;
+        }
+
+        return false;
+    }
+
     public void SaveGame(){
         string s = "";
 
         s+= "0" + "|";
         s+= gold.ToString() + "|";
         s+= xp.ToString() + "|";
-        s+= "0";
+        s+= weapon.weaponLevel.ToString();
 
         PlayerPrefs.SetString("SaveGame", s);
     }
@@ -57,7 +75,7 @@ public class GameManager : MonoBehaviour
         //playerskin =
         gold = int.Parse(data[1]);
         xp = int.Parse(data[2]);
-        //weaponlevel = 
+        weapon.SetWeaponLevel(int.Parse(data[3]));
     }
 
 }
