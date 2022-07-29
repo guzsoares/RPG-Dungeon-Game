@@ -31,9 +31,9 @@ public class CharacterMenu : MonoBehaviour
         }
         else
         {
-             currentCharacter++;
+             currentCharacter--;
 
-            if (currentCharacter == GameManager.instance.playerSprites.Count)
+            if (currentCharacter < 0)
             {
                 currentCharacter = GameManager.instance.playerSprites.Count - 1;
             }
@@ -45,6 +45,7 @@ public class CharacterMenu : MonoBehaviour
     private void OnSelectionChanged ()
     {
         characterSelectedSprite.sprite = GameManager.instance.playerSprites[currentCharacter];
+        GameManager.instance.player.SwapSprite(currentCharacter);
     }
 
     // Weapon upgrade
@@ -73,10 +74,27 @@ public class CharacterMenu : MonoBehaviour
         // Meta
         hitpointText.text = GameManager.instance.player.hitpoint.ToString();
         goldText.text = GameManager.instance.gold.ToString();
-        levelText.text = GameManager.instance.weapon.weaponLevel.ToString();
-
+        levelText.text = GameManager.instance.GetCurrentLevel().ToString();
         // xp BAR
-        xpText.text = "NOT IMPLEMENTED";
-        xpBar.localScale = new Vector3(0.5f,1.0f,0);
+
+        int currLevel = GameManager.instance.GetCurrentLevel();
+        if (currLevel == GameManager.instance.xpTable.Count)
+        {
+            xpText.text = "Max Level";
+            xpBar.localScale = new Vector3(1.0f,1.0f,0);
+        }
+        else
+        {
+            int prevXp = GameManager.instance.GetXpToLevel(currLevel - 1);
+            int nextLevelXp = GameManager.instance.GetXpToLevel(currLevel);
+
+            int ratio = nextLevelXp - prevXp;
+            int currentXp = GameManager.instance.xp - prevXp;
+
+            float completionRatio = (float)currentXp / (float)ratio;
+            xpText.text = currentXp.ToString() + " / " + ratio.ToString();
+            xpBar.localScale = new Vector3(completionRatio,1.0f,0);
+        }
+
     }
 }

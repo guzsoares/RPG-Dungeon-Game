@@ -30,7 +30,6 @@ public class Enemy : Mover
     }
 
     private void FixedUpdate(){
-
         // Player in range
         if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
@@ -77,8 +76,8 @@ public class Enemy : Mover
 
     protected override void Death(){
         Destroy(gameObject);
-        GameManager.instance.xp += xpValue;
-        GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.white, transform.position, Vector3.up * 30, 1.0f);
+        GameManager.instance.GrantXp(xpValue);
+        GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.green, transform.position, Vector3.up * 30, 1.0f);
     }
 
 

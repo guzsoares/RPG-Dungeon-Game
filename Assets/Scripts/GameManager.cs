@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
         if (GameManager.instance != null){
 
             Destroy(gameObject);
+            Destroy(player.gameObject);
+            Destroy(floatingTxtManager.gameObject);
             return;
         }
         instance = this;
@@ -53,6 +55,52 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+    public int GetCurrentLevel ()
+    {
+        int r = 0;
+        int add = 0;
+
+        while (xp >= add)
+        {
+            add += xpTable[r];
+            r++;
+
+            if (r == xpTable.Count)
+            {
+                return r;
+            }
+        }
+        return r;
+    }
+
+    public int GetXpToLevel(int level){
+        int r = 0;
+        int exp = 0;
+
+        while (r < level)
+        {
+            exp += xpTable[r];
+            r++;
+        }
+        
+        return exp;
+    }
+
+    public void GrantXp(int exp)
+    {
+        int currLevel = GetCurrentLevel();
+        xp += exp;
+        if (currLevel < GetCurrentLevel())
+        {
+            OnLevelUp();
+        }
+    }
+
+    public void OnLevelUp(){
+        ShowText("Level up!",22, Color.white, player.transform.position, Vector3.up * 40, 0.7f);
+        player.OnLevelUp();
+    }
+
     public void SaveGame(){
         string s = "";
 
@@ -72,10 +120,14 @@ public class GameManager : MonoBehaviour
         string[] data = PlayerPrefs.GetString("SaveGame").Split('|');
 
         //Load Game
-        //playerskin =
+        //player.SwapSprite(int.Parse(data[0]));
         gold = int.Parse(data[1]);
         xp = int.Parse(data[2]);
         weapon.SetWeaponLevel(int.Parse(data[3]));
+        if (GetCurrentLevel() != 1)
+            player.SetLevel(GetCurrentLevel());
+
+        player.transform.position = GameObject.Find("WayPoint").transform.position;
     }
 
 }
