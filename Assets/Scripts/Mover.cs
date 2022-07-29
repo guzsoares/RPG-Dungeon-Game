@@ -7,8 +7,8 @@ public abstract class Mover : Fighter
     protected BoxCollider2D boxCollider;
     protected Vector3 moveDelta;
     protected RaycastHit2D hit;
-    protected float ySpeed = 0.75f;
-    protected float xSpeed = 1.0f;
+
+    private Vector3 scale;
 
     protected virtual void Start()
     {
@@ -16,17 +16,21 @@ public abstract class Mover : Fighter
     }
 
 
-    protected virtual void UpdateMotor(Vector3 input){
+    protected virtual void UpdateMotor(Vector3 input, float ySpeed, float xSpeed){
         
         // Reset MoveDelta
         moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed,0);
 
         // Revert sprite
         if (moveDelta.x > 0){
-            transform.localScale = Vector3.one;
+            scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x);
+            transform.localScale = scale;
         }
         else if (moveDelta.x < 0){
-            transform.localScale = new Vector3(-1,1,0);
+            scale = transform.localScale;
+            scale.x = -Mathf.Abs(scale.x);
+            transform.localScale = scale;
         }
 
         //add push vector

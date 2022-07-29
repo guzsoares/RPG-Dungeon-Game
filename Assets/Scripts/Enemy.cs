@@ -8,6 +8,8 @@ public class Enemy : Mover
     public int xpValue = 1;
 
     // Logic
+    public float ySpeed = 0.75f;
+    public float xSpeed = 1.0f;
     public float triggerLenght = 1;
     public float chaseLength = 5;
     private bool chasing;
@@ -21,15 +23,19 @@ public class Enemy : Mover
     public ContactFilter2D filter;
     private BoxCollider2D hitbox;
     private Collider2D[] hits = new Collider2D[10];
+    
+    private Animator anim;
 
     protected override void  Start(){
         base.Start();
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
+        anim = GetComponent<Animator>();
         hitbox = transform.GetChild(0).GetComponent<BoxCollider2D>();
     }
 
     private void FixedUpdate(){
+
         // Player in range
         if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
@@ -41,19 +47,27 @@ public class Enemy : Mover
             {
                 if(!collidingWithPlayer)
                 {
-                    UpdateMotor((playerTransform.position - transform.position).normalized);
+                    anim.SetBool("walking",true);
+                    UpdateMotor((playerTransform.position - transform.position).normalized, ySpeed, xSpeed);
                 }
 
             }
             else
-            {
-                UpdateMotor(startingPosition - transform.position);
+            {   
+                anim.SetBool("walking",true);
+                UpdateMotor(startingPosition - transform.position, ySpeed, xSpeed);
             }
         }
         else
-        {
-            UpdateMotor(startingPosition - transform.position);
+        {   
+            anim.SetBool("walking",true);
+            UpdateMotor((startingPosition - transform.position), ySpeed, xSpeed);
             chasing = false;
+        }
+
+        if (transform.position == startingPosition)
+        {
+            anim.SetBool("walking",false);
         }
 
             //Check for overlaps

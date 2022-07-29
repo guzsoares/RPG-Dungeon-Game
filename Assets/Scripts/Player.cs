@@ -7,6 +7,9 @@ public class Player : Mover
 
     private SpriteRenderer spriteRenderer;
 
+    public float ySpeed = 0.75f;
+    public float xSpeed = 1.0f;
+
     protected override void Start ()
     {
         base.Start();
@@ -19,7 +22,7 @@ public class Player : Mover
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        UpdateMotor(new Vector3(x,y,0));
+        UpdateMotor(new Vector3(x,y,0), ySpeed, xSpeed);
     }
 
     public void SwapSprite (int skinID)
