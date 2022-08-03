@@ -9,16 +9,19 @@ public class GameManager : MonoBehaviour
 
     private void Awake(){
         if (GameManager.instance != null){
-
             Destroy(gameObject);
             Destroy(player.gameObject);
             Destroy(floatingTxtManager.gameObject);
-            return;
+            Destroy(HUD.gameObject);
+            Destroy(Menu.gameObject);
         }
-        instance = this;
-        SceneManager.sceneLoaded += LoadGame;
-        DontDestroyOnLoad(gameObject);
+        else{
+            instance = this;
+            SceneManager.sceneLoaded += LoadGame;
+            SceneManager.sceneLoaded += LoadScene;
+        }
     }
+
     //Resources
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
@@ -28,6 +31,10 @@ public class GameManager : MonoBehaviour
     public Player player;
     public FloatingTextManager floatingTxtManager;
     public Weapon weapon;
+    public RectTransform hitpointBar;
+    public GameObject HUD;
+    public GameObject Menu;
+    public Animator deathMenuAnimator;
     //Logic
     public int gold;
     public int xp;
@@ -55,6 +62,11 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+    public void HitPointChange()
+    {
+        float ratio = (float)player.hitpoint / (float)player.maxHitpoint;
+        hitpointBar.localScale = new Vector3(1,ratio,1);
+    }
     public int GetCurrentLevel ()
     {
         int r = 0;
@@ -101,6 +113,13 @@ public class GameManager : MonoBehaviour
         player.OnLevelUp();
     }
 
+    public void Respawn()
+    {
+        deathMenuAnimator.SetTrigger("hide");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        player.Respawn();
+    }
+
     public void SaveGame(){
         string s = "";
 
@@ -113,6 +132,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void LoadGame(Scene s, LoadSceneMode mode){
+
+
+        SceneManager.sceneLoaded -= LoadGame;
 
         if(!PlayerPrefs.HasKey("SaveGame")){
             return;
@@ -127,7 +149,12 @@ public class GameManager : MonoBehaviour
         if (GetCurrentLevel() != 1)
             player.SetLevel(GetCurrentLevel());
 
+    }
+
+    public void LoadScene(Scene s, LoadSceneMode mode)
+    {
         player.transform.position = GameObject.Find("WayPoint").transform.position;
     }
+
 
 }
